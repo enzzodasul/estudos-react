@@ -1,7 +1,16 @@
+import { Footer } from './components/footer.jsx';
+import { Header } from './components/header.jsx';
+
 export function App() {
     return (
-        <div>
-            <h1 className="text-red-500 text-5xl font-bold">Hello word</h1>
+        <div className="flex flex-col h-screen">
+            <Header />
+
+            <main className="flex-1">
+                <h1>Catálogo</h1>
+            </main>
+
+            <Footer />
         </div>
     );
 }
