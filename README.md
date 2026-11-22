@@ -1,4 +1,23 @@
 ---
+miniCatalogo/
+└── src/
+    ├── components/
+    │   └── product-card.jsx
+    ├── context/
+    │   └── favorites-context.jsx
+    ├── hooks/
+    │   └── use-products.js
+    ├── pages/
+    │   ├── favorites.jsx
+    │   ├── home.jsx
+    │   └── product-details.jsx
+    ├── app.jsx
+    └── main.jsx
+
+
+
+
+
 //COMANDO-DE-INICIALIZACAO-DO-PROJETO-REACT://
 ## npm create vite@latest
 ---
