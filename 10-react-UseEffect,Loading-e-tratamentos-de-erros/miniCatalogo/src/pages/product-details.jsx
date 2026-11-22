@@ -1,11 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { products } from '../data';
+import { useProducts } from '../hooks/use-products';
 
 export function ProductDetails() {
     const { id } = useParams();
+    const { data } = useProducts();
     const navigate = useNavigate();
 
-    const product = products.find((product) => String(product.id) === id);
+    const product = data.find((product) => String(product.id) === id);
 
     if (!product) {
         return <p>Produto não encontrado!</p>;
