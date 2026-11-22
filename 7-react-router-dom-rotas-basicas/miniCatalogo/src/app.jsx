@@ -1,5 +1,6 @@
 import { Footer } from './components/footer.jsx';
 import { Header } from './components/header.jsx';
+import { Favorites } from './pages/favorites.jsx';
 import { Home } from './pages/home.jsx';
 import { Route, Routes } from 'react-router-dom';
 
@@ -13,6 +14,10 @@ export function App() {
                     <Route
                         path="/"
                         element={<Home />}
+                    />
+                    <Route
+                        path="/favoritos"
+                        element={<Favorites />}
                     />
                 </Routes>
             </main>
