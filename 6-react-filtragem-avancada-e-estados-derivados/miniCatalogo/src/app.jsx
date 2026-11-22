@@ -10,10 +10,13 @@ import { products } from './data.jsx';
 
 export function App() {
     const [query, setQuery] = useState('');
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
 
-    const filtered = products.filter((product) =>
-        product.name.toLowerCase().includes(query.toLowerCase()),
-    );
+    const filtered = products
+        .filter((product) => product.name.toLowerCase().includes(query.toLowerCase()))
+        .filter((product) => minPrice === '' || product.price > Number(minPrice))
+        .filter((product) => maxPrice === '' || product.price < Number(maxPrice));
 
     return (
         <div className="flex flex-col min-h-screen bg-zinc-900 text-zinc-100">
@@ -24,7 +27,13 @@ export function App() {
                     value={query}
                     onChange={setQuery}
                 />
-                <Filter />
+
+                <Filter
+                    minPrice={minPrice}
+                    maxPrice={maxPrice}
+                    onMinPriceChange={setMinPrice}
+                    onMaxPriceChange={setMaxPrice}
+                />
 
                 <ProductList products={filtered} />
             </main>
