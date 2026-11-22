@@ -1,4 +1,3 @@
-import { products } from '../../../../9-consumindo-api-fake/miniCatalogo/src/data';
 import { ProductCard } from '../components/product-card';
 import { useFavorites } from '../context/favorites-context';
 
